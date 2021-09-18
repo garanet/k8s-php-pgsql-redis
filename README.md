@@ -5,7 +5,7 @@ This project shows how to create a setup for a local env with PHP, PGSQL, and RE
 
 It is tested locally, but it can be used also for pipeline like the gitlab-ci, or using your own docker-registry or DigitalOcean / Heroku and tested in the cloud like Azure, AWS EKS...
 
-*Working with helm charts/kustomization and recently mostly with GitOps in AWS in an awesome infra with Flux+CrossPlane+SOPS+Traefik+Calico, I'll consider this project a basic project that shows a multi-approach to configure the kube environments.
+*Working with helm charts/kustomization/docker-compose and recently mostly with GitOps in AWS in an awesome infra with Flux+CrossPlane+SOPS+Traefik+Calico, I'll consider this project a basic project that shows a multi-approach to configure the kube environments.
 It is using the normal k8s base64 secrets, but can be configured also with secret-manager/rotation ect..*
 
 ```mermaid
@@ -17,6 +17,7 @@ D -- STORE DATA --> E{Redis}
 E --> F([PHP8-FRONTEND])
 F --> G[Browser Results]
 ```
+
 **In this projecy you'll find few:**
  - Elementary BASH scripting. 
  - Elementary PHP scripting. 
