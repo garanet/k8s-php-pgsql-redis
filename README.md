@@ -3,10 +3,10 @@
 ## Challenge
 This project shows how to create a setup for a local env with PHP, PGSQL, and REDIS in K8s that could be used for day-to-day development. 
 
-It is tested locally, but it can be used also for pipeline like the gitlab-ci, or using your own docker-registry or DigitalOcean / Heroku and tested in the cloud like Azure, AWS EKS...
+It is tested locally, but it can be used also for pipelines like the gitlab-ci, or using your own docker-registry or DigitalOcean / Heroku and tested in the cloud like Azure, AWS EKS...
 
-*Working with helm charts/kustomization/docker-compose and recently mostly with GitOps in AWS in an awesome infra with Flux+CrossPlane+SOPS+Traefik+Calico, I'll consider this project a basic project that shows a multi-approach to configure the kube environments.
-It is using the normal k8s base64 secrets, but can be configured also with secret-manager/rotation ect..*
+*Working with helm charts/kustomization/docker-compose and recently mostly with GitOps in AWS in an awesome infra with Flux+CrossPlane+SOPS+Traefik+Calico, I'll consider this project a basic project that shows a multi-approach to configure the KUBE environments.
+It is using the normal k8s base64 secrets, but can be configured also with secret-manager/rotation ect...*
 
 ```mermaid
 graph LR
@@ -21,11 +21,11 @@ F --> G[Browser Results]
 **In this projecy you'll find few:**
  - Elementary BASH scripting. 
  - Elementary PHP scripting. 
- - Elementary Docker knowlodge. 
- - Elementary Kubectl knowlodge. 
- - Elementary Linux knowlodge. 
- - Elementary Redis/NOSQL knowlodge. 
- - Elementary PGSQL knowlodge.
+ - Elementary Docker knowledge. 
+ - Elementary Kubectl knowledge. 
+ - Elementary Linux knowledge. 
+ - Elementary Redis/NOSQL knowledge. 
+ - Elementary PGSQL knowledge.
  - How to build a docker image.
  - How to use ConfigMaps / Secrets / Replica / envs
  - How to use the networks and the persistent volumes.
