@@ -1,0 +1,18 @@
+# php+pgsql+redis project - LOADBALANCER FOR PHP
+# @maintainer G.Gatto 2021 - www.garanet.net
+# repo from https://github.com/garanet/k8s-php-pgsql-redis
+# Tested on a MacOsx with Docker + Kuberneters (Docker-Desktop)
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-service
+  labels:
+    run: php-service
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+  selector:
+    app: php-service

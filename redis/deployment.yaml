@@ -1,0 +1,33 @@
+# php+pgsql+redis project - REDIS DEPLOYMENT
+# @maintainer G.Gatto 2021 - www.garanet.net
+# repo from https://github.com/garanet/k8s-php-pgsql-redis
+# Tested on a MacOsx with Docker + Kuberneters (Docker-Desktop)
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: redis-deployment
+  labels:
+    app: redis
+spec:
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis
+          args: ["--requirepass", "$(REDIS_PASS)"]
+          ports:
+            - containerPort: 6379
+          env:
+            - name: MASTER
+              value: "true"
+            - name: REDIS_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: redis-secret
+                  key: REDIS_PASS

@@ -1,0 +1,17 @@
+# php+pgsql+redis project - POSTGRESQL SERVICE
+# @maintainer G.Gatto 2021 - www.garanet.net
+# repo from https://github.com/garanet/k8s-php-pgsql-redis
+# Tested on a MacOsx with Docker + Kuberneters (Docker-Desktop)
+apiVersion: v1
+kind: Service
+metadata:
+  name: pgsql-service
+  labels:
+    app: postgresql-db
+spec:
+  type: NodePort
+  ports:
+    - port: 5432
+      targetPort: 5432
+  selector:
+    app: postgresql-db

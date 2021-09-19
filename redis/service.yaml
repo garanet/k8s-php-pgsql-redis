@@ -1,0 +1,13 @@
+# php+pgsql+redis project - REDIS SERVICE
+# @maintainer G.Gatto 2021 - www.garanet.net
+# repo from https://github.com/garanet/k8s-php-pgsql-redis
+# Tested on a MacOsx with Docker + Kuberneters (Docker-Desktop)
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+spec:
+  selector:
+    app: redis
+  ports:
+    - port: 6379
