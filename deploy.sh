@@ -24,8 +24,7 @@ if [ "$1" == "start" ]; then
         sleep 10
         kubectl port-forward deployment/php-fpm-nginx 8000:80
         echo ''
-        echo '+ Open your browser and visit the urls: '
-        echo '+ or http://localhost:8000/ - http://localhost:8080/world'
+        echo '+ Open your browser and visit http://localhost:8000'
         echo ''
     else
         clear
