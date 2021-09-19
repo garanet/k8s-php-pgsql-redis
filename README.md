@@ -18,7 +18,7 @@ E --> F([PHP8-FRONTEND])
 F --> G[Browser Results]
 ```
 
-**In this projecy you'll find few:**
+**In this project you'll find few:**
  - Elementary BASH scripting. 
  - Elementary PHP scripting. 
  - Elementary Docker knowledge. 
